@@ -48,7 +48,7 @@ btn.addEventListener('click', () => {
 });
 
 function takeCommand(message) {
-    if (message.includes('hey') || message.includes('hello')) {
+    if (message.includes('hey') || message.includes('hello') || message.includes('jarvis') || message.includes('hii')) {
         speak("Yes Sir, waiting for you're order");
     } else if (message.includes("open google")) {
         window.open("https://google.com", "_blank");
@@ -59,7 +59,7 @@ function takeCommand(message) {
     } else if (message.includes("open facebook")) {
         window.open("https://facebook.com", "_blank");
         speak("Opening Facebook...");
-    } else if (message.includes('what is') || message.includes('who is') || message.includes('what are')) {
+    } else if (message.includes('what is') || message.includes('who is') || message.includes('what are') || message.includes('where are') || message.includes('where is')) {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "This is what I found on the internet regarding " + message;
         speak(finalText);
